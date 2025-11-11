@@ -121,7 +121,7 @@ EcoPlast/
 
 ## 👨‍💻 Autor
 
-Desenvolvido como projeto de inovação sustentável.
+Desenvolvido por Jovitor46.
 
 ---
 
