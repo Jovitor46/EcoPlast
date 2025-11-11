@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EcoPlast — Reuso Inteligente de Plástico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>EcoPlast — Reuso Inteligente de Plástico</h1>
+    <p>Transformando resíduos plásticos em produtos úteis e sustentáveis</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Sobre o Projeto</h2>
+      
+      <div class="about-flex">
+          
+          <div class="about-text">
+              <p>O <strong>EcoPlast</strong> é um projeto inovador que transforma resíduos plásticos, como garrafas PET e tampinhas, em produtos úteis para o dia a dia, como tábuas de carne, armários e utensílios domésticos. Nosso objetivo é reduzir o impacto ambiental do plástico, promovendo economia circular e sustentabilidade.</p>
+          </div>
+          
+          <div class="about-image">
+    <img src="images/tabua.png" alt="" />
+  </div>
+      </section>
+
+  
+    <section class="card">
+      <h2>Impacto Ambiental e Social</h2>
+      <p>Segundo a EMBRAPA (Empresa Brasileira de Pesquisa Agropecuária), O Brasil é o oitavo maior poluidor de plástico do mundo, despejando cerca de 1,3 milhão de toneladas de resíduos plásticos apenas nos mares anualmente.</p>
+      <p>O EcoPlast não apenas reduz o volume de plástico descartado, mas também cria oportunidades para a educação ambiental em escolas e comunidades. Cada produto vendido representa menos plástico no meio ambiente e mais conscientização nas pessoas.</p>
+    </section>
+
+<section class="card">
+      <h2>Processo de Produção</h2>
+      <div class="process-list">
+        <details>
+          <summary>Coleta</summary>
+          <p>Realizamos parcerias com empresas locais e pontos de coleta comunitários para recolher plástico em desuso.</p>
+        </details>
+        <details>
+          <summary>Preparação</summary>
+          <p>O material é <strong>lavado, triturado e separado</strong> por tipo e cor para garantir qualidade.</p>
+        </details>
+        <details>
+          <summary>Fabricação</summary>
+          <p>O plástico é <strong>fundido e moldado</strong> em placas e peças com controle de temperatura e pressão.<br>Status: Produção piloto.<br>Tempo estimado: 1 dia por lote.</p>
+        </details>
+        <details>
+          <summary>Economia Circular</summary>
+          <p>Produtos finalizados são disponibilizados para venda.<br>OBS: Cada produto vai ter um valor de 15% ~ 30% abaixo ao valor do mercado.(Por conta da maneira que vamos produzi-los)</p>
+        </details>
+      </div>
+    </section>
+
+<section class="card">
+  <h2>Oportunidade de Investimento</h2>
+  <p>
+    Com baixo custo de operação e alta escalabilidade, o EcoPlast oferece um retorno sólido e um propósito significativo. 
+    Professores e investidores podem apoiar financeiramente e participar da expansão do projeto, incentivando práticas 
+    ecológicas e geração de renda local.
+  </p>
+
+  <div class="material-list">
+    <details>
+      <summary>📦 Lista dos Materiais</summary>
+      <ul>
+        <li class="material-item"><span class="material-badge">🧴</span>Garrafa PET limpa e seca</li>
+        <li class="material-item"><span class="material-badge">🧢</span>Tampinhas plásticas diversas</li>
+        <li class="material-item"><span class="material-badge">🏭</span>Prensa ou molde para modelagem</li>
+        <li class="material-item"><span class="material-badge">🎨</span>Tinta ecológica ou pigmento natural</li>
+        <li class="material-item"><span class="material-badge">🔧</span>Ferramentas de corte e lixamento</li>
+      </ul>
+    </details>
+  </div>
+  
+  <div class="simulator" aria-label="Simulador de Ponto de Equilíbrio">
+    <input id="invest-capital" type="number" min="0" step="0.01" placeholder="Capital Inicial (R$)" />
+    <input id="invest-cost" type="number" min="0" step="0.01" placeholder="Custo por unidade (R$)" />
+    <input id="invest-price" type="number" min="0" step="0.01" placeholder="Preço de venda por unidade (R$)" />
+    <button type="button" onclick="simularRetorno()">Calcular Ponto de Equilíbrio</button>
+  </div>
+
+  <div id="invest-result" class="sim-result" aria-live="polite">
+    Insira valores e clique em "Simular Retorno" para ver o resultado.
+  </div>
+</section>
+
+
+    <section class="card">
+      <h2>Visão de Futuro</h2>
+      <p>O plano é desenvolver uma rede colaborativa de mini fábricas sustentáveis, onde o plástico recolhido se transforma em produtos de alta durabilidade e design moderno, fomentando uma nova cultura de consumo consciente e economia verde.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EcoPlast — Todos os direitos reservados</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+:root{
+  --bg: #0b1120; /* fundo principal */
+  --card-bg: #0f172a; /* fundo das seções */
+  --text: #d1d5db; /* texto principal */
+  --title: #22c55e; /* cor dos títulos */
+  --accent: #16a34a; /* cor de destaque */
+  --radius: 12px;
+  --max-width: 920px;
+}
+
+/* reset básico */
+*{box-sizing:border-box;font-family:'Inter',sans-serif;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+
+header{padding:48px 20px;text-align:center;background:#020617}
+header h1{color:var(--title);font-size:2rem;font-weight:700}
+header p{color:#9ca3af;margin-top:8px}
+
+main{max-width:var(--max-width);margin:36px auto;padding:0 20px}
+
+.card{background:var(--card-bg);border-radius:var(--radius);padding:28px;margin-bottom:28px;box-shadow:0 6px 24px rgba(0,0,0,0.35)}
+.card h2{color:var(--title);margin-bottom:12px}
+.card p,.card li{color:var(--text)}
+
+/* about: texto + imagem */
+.about-flex{display:flex;gap:24px;align-items:flex-start}
+.about-text{flex:2}
+.about-image{flex:1;max-width:320px;border-radius:10px;overflow:hidden}
+.about-image img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* listas */
+ul{padding-left:22px}
+li{margin-bottom:8px}
+
+/* process & material details: grid layout (2 cols desktop, 1 col mobile) */
+.process-list, .material-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.process-list details, .material-list details {
+  width: 100%;
+  background: #111827;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform .18s ease, background .2s;
+}
+.process-list details:hover, .material-list details:hover {
+  transform: translateY(-4px);
+  background: #0b1220;
+}
+.process-list summary, .material-list summary {
+  color: var(--title);
+  font-weight: 600;
+  cursor: pointer;
+}
+.process-list p, .material-list p { color: var(--text); margin: 8px 0 0; }
+
+/* material badges */
+.material-item{display:flex;align-items:center;gap:10px}
+.material-badge{width:34px;height:34px;border-radius:8px;background:var(--title);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
+
+/* gráfico */
+.chart-card{margin-top:18px}
+.chart-container{width:100%;background:#081224;padding:14px;border-radius:10px}
+canvas#recovery-chart{width:100% !important;height:320px !important;display:block}
+
+/* simulador */
+.simulator{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.simulator input{background:#0f172a;border:1px solid #1f2937;border-radius:8px;color:var(--text);padding:8px 10px;min-width:180px}
+.simulator input:focus{outline:none;box-shadow:0 0 0 3px rgba(34,197,94,0.08);border-color:var(--accent)}
+.simulator button{background:var(--title);color:#fff;border:none;border-radius:8px;padding:9px 14px;cursor:pointer;font-weight:600}
+.simulator button:hover{background:var(--accent)}
+
+.sim-result{margin-top:14px;background:#0f172a;border-left:4px solid var(--accent);border-radius:8px;padding:12px;color:var(--text)}
+.sim-result.error{background:#3b1012;border-left-color:#f87171;color:#f87171}
+
+/* responsivo */
+@media (max-width:768px) {
+  header { padding: 36px 16px; }
+  header h1 { font-size: 1.6rem; }
+  header p { font-size: 0.9rem; }
+
+  main { padding: 0 16px; margin: 24px auto; }
+
+  .card { padding: 20px; margin-bottom: 20px; }
+  .card h2 { font-size: 1.3rem; margin-bottom: 10px; }
+
+  .about-flex { flex-direction: column; gap: 16px; }
+  .about-image { max-width: 100%; }
+
+  .process-list, .material-list { grid-template-columns: 1fr; gap: 14px; }
+  .process-list details, .material-list details { padding: 14px; }
+
+  .simulator { flex-direction: column; gap: 8px; }
+  .simulator input { min-width: 100%; width: 100%; }
+  .simulator button { width: 100%; }
+
+  .sim-result { font-size: 0.9rem; padding: 10px; }
+}
+
+@media (max-width: 480px) {
+  header { padding: 24px 12px; }
+  header h1 { font-size: 1.3rem; }
+  header p { font-size: 0.85rem; }
+
+  main { padding: 0 12px; margin: 16px auto; }
+  :root { --max-width: 100%; }
+
+  .card { padding: 16px; margin-bottom: 16px; }
+  .card h2 { font-size: 1.1rem; }
+  .card p, .card li { font-size: 0.9rem; }
+
+  .about-text { flex: 1; }
+  .about-image { max-height: 200px; }
+  .about-image img { height: 200px; }
+
+  .material-badge { width: 28px; height: 28px; font-size: 14px; }
+  .material-item { gap: 8px; }
+
+  .simulator input { padding: 6px 8px; font-size: 0.9rem; }
+  .simulator button { padding: 8px 12px; font-size: 0.9rem; }
+
+  .sim-result { font-size: 0.85rem; padding: 8px; }
+
+  ul { padding-left: 18px; }
+  li { margin-bottom: 6px; }
+}
